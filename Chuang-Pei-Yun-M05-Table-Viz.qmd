@@ -1,0 +1,126 @@
+---
+title: "M05 — Visualizing Data with Tables for MSDM CEP"
+subtitle: "A presentation table for the PhD Orthodontics website analysis"
+author: "Pei-Yun (Candice) Chuang"
+date: today
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    toc-expand: 2
+    number-sections: true
+    embed-resources: true
+    code-fold: true
+    code-tools: true
+    code-overflow: wrap
+editor: visual
+execute:
+  freeze: auto
+  warning: false
+  message: false
+---
+
+# Project and data
+
+**Prompt:** Start a new project and Quarto file in an M05 folder, and prepare an HTML report using Quarto features.
+
+This report is an individual practice exercise for **AO1: Website Redesign and User Behavior** in the Group 6 PhD Orthodontics CEP. The team seeks to understand how visitors move through pages toward a consultation inquiry. No clinic analytics export was supplied for this assignment. I therefore use `gt::pizzaplace` for the table demonstration; its sales describe a pizza restaurant, **not** PhD Orthodontics patients or website performance.
+
+> A useful table lets a reader compare exact values while seeing a pattern at a glance.
+
+::: {.callout-note title="Data boundary"}
+The example below illustrates a reporting technique. It cannot support a recommendation about the clinic until the same workflow is applied to permissioned website data.
+:::
+
+# Reflection on table visualization
+
+**Prompt:** Summarize what you learned from the videos; explain what you liked about `gt` and `gtExtras`, how tables complement charts, and when you would prefer a table.
+
+The assigned videos show that a table can do more than list values. The first *Making Beautiful Tables with {gt}* tutorial moves from a title and subtitle to a stub, readable labels, number formatting, source notes, footnotes, and cell colors. The second tutorial shows how currency, column widths, fonts, alignment, and borders make a table easier to present. The Tom Mock conversation and short `gtExtras` video extend that idea to compact visualizations inside a table. The long W05 lecture places the exercise in the course context of communicating proposed methods; I use that context to ask what a stakeholder would learn from the table. These observations follow the provided video titles and chapter markers; I have not independently reviewed the full recordings.[^1]
+
+[^1]: Assigned materials: [W05 course lecture](https://streaming.cpp.edu/embed/secure/iframe/entryId/1_m1bvmp1r/uiConfId/52359092/st/0); [Making Beautiful Tables with {gt}, tutorial 1](https://www.youtube.com/watch?v=z0UGmMOxl-c); [tutorial 2](https://www.youtube.com/watch?v=UoJm8_nFWsE); [conversation with Tom Mock](https://www.youtube.com/watch?v=dxDeotwylr8); and [Create Fantastic Tables using gtExtras](https://www.youtube.com/watch?v=AJ0_PCIVXD4).
+
+I especially like that the table-building code keeps presentation decisions separate from the calculations. For instance, `group_by()` and `summarise()` define the measures, while `gt()` and its formatting functions control what the audience sees. The title and footnote supply context; `data_color()` highlights magnitude; `gtExtras::gt_plt_bar()` adds an inline bar. An inline bar is a quick visual cue, but the adjacent count still gives an exact answer.
+
+**Tables and charts serve different reading tasks:**
+
+1.  A chart shows shape, trend, and outliers quickly.
+2.  A table supports exact comparisons and several measures in the same row.
+3.  A small plot in a table connects both: pattern first, precise value second.
+
+I would choose a table when stakeholders need to compare a limited set of pages or locations by visits, engagement, and inquiries; inspect exact values; or discuss a specific action. I would choose a larger chart when the main question concerns a long time trend or a distribution. For AO1, a future table could compare consultation page engagement across **San Gabriel and Chino Hills**, provided the website analytics permits location or landing-page breakdowns.
+
+# A presentation-ready example
+
+**Prompt:** Use CEP data, or the built-in `pizzaplace` dataset if CEP data is unavailable. Group meaningful variables and use `gt` and `gtExtras` together to show descriptive statistics, exact numbers, and small charts in a table. Include titles, stub label, readable column labels, source notes, footnotes, a spanner, formatted numbers, and color.
+
+Here, pizza *category* plays the role of a comparison group. **Units sold** stands in for a volume metric, while **average price** and **revenue** illustrate how a dashboard can put different measures together. The analogy is about table design; a restaurant's revenue is not a proxy for clinic inquiries.
+
+```{r}
+#| label: tbl-pizza
+#| tbl-cap: "Pizza sales by category: exact values with an inline volume bar"
+#| echo: false
+library(dplyr)
+library(gt)
+library(gtExtras)
+
+sales <- gt::pizzaplace |>
+  group_by(type) |>
+  summarise(
+    pizzas_sold = n(),
+    average_price = mean(price, na.rm = TRUE),
+    revenue = sum(price, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  mutate(type = tools::toTitleCase(type), volume_bar = pizzas_sold) |>
+  arrange(desc(pizzas_sold))
+
+sales |>
+  gt(rowname_col = "type") |>
+  tab_header(
+    title = "Which pizza categories led sales?",
+    subtitle = "2015 transactions · table design demonstration for AO1"
+  ) |>
+  tab_stubhead(label = "Pizza category") |>
+  tab_spanner(label = "Sales performance", columns = c(pizzas_sold, average_price, revenue, volume_bar)) |>
+  cols_label(
+    pizzas_sold = "Pizzas sold",
+    average_price = "Average price",
+    revenue = "Revenue",
+    volume_bar = "Relative volume"
+  ) |>
+  fmt_number(columns = pizzas_sold, decimals = 0) |>
+  fmt_currency(columns = c(average_price, revenue), currency = "USD", decimals = 2) |>
+  data_color(columns = revenue, palette = c("#edf7f2", "#25836f")) |>
+  tab_footnote(
+    footnote = "Each dataset row represents one pizza sold; counts are pizzas, not orders.",
+    locations = cells_column_labels(columns = pizzas_sold)
+  ) |>
+  tab_source_note(source_note = "Source: gt::pizzaplace, 2015 sample sales; calculations from individual pizza records.") |>
+  gtExtras::gt_plt_bar(column = volume_bar, keep_column = FALSE, width = 55, color = "#187d80") |>
+  tab_options(table.font.names = c("Arial", "sans-serif"), data_row.padding = px(9))
+```
+
+::: {.callout-tip title="How to read @tbl-pizza"}
+The bar encodes category volume; the count gives the exact number. Revenue and average price answer different questions, so the largest category by count need not have the highest average price.
+:::
+
+# Why this belongs in the CEP
+
+**Prompt:** Explain why the table is worth adding to the MSDM project report or presentation slides.
+
+The design of @tbl-pizza can become a concise **website page comparison** for the PhD Orthodontics project. With actual GA4 or another approved analytics export, I would replace pizza categories with page groups or service pages; replace unit sales with sessions; and replace price and revenue with engagement and consultation inquiry measures, if those events are tracked reliably. The inline bars would make high-traffic pages visible while exact values and footnotes would keep definitions transparent. This would help the team decide which pages to inspect first for friction in the consultation journey. It would *not* establish a causal effect of design changes on bookings without a suitable evaluation.
+
+# Appendix: project links
+
+**Prompt:** Push the project folder to GitHub, publish the HTML on GitHub Pages, and include clickable links to both URLs.
+
+::: {.callout-warning title="Publishing details pending"}
+The GitHub repository and Pages URLs have not been provided or verified. Add the two actual links after publishing; do not submit placeholder addresses as working links.
+:::
+
+-   GitHub repository: [candicechuang/M05-Table-Viz](https://github.com/candicechuang/M05-Table-Viz)
+-   Published HTML: **\[insert verified GitHub Pages URL\]**
+
+For reproduction, install `dplyr`, `gt`, and `gtExtras` in R, open this M05 folder in RStudio or Positron, and render this `.qmd` using Quarto. The HTML output is intended to be self-contained through `embed-resources: true`.
