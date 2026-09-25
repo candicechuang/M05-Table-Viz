@@ -2275,7 +2275,7 @@ vertical-align: -.125em;
 <section id="reflection-on-table-visualization" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Reflection on table visualization</h1>
 <p><strong>Prompt:</strong> Summarize what you learned from the videos; explain what you liked about <code>gt</code> and <code>gtExtras</code>, how tables complement charts, and when you would prefer a table.</p>
-<p>The assigned videos show that a table can do more than list values. The first <em>Making Beautiful Tables with {gt}</em> tutorial moves from a title and subtitle to a stub, readable labels, number formatting, source notes, footnotes, and cell colors. The second tutorial shows how currency, column widths, fonts, alignment, and borders make a table easier to present. The Tom Mock conversation and short <code>gtExtras</code> video extend that idea to compact visualizations inside a table. The long W05 lecture places the exercise in the course context of communicating proposed methods; I use that context to ask what a stakeholder would learn from the table. These observations follow the provided video titles and chapter markers; I have not independently reviewed the full recordings.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>The assigned videos show that a table can do more than list values. The first <em>Making Beautiful Tables with {gt}</em> tutorial moves from a title and subtitle to a stub, readable labels, number formatting, source notes, footnotes, and cell colors. The second tutorial covers currency, column widths, fonts, alignment, and borders that make a table easier to present. The Tom Mock conversation and short <code>gtExtras</code> video extend that idea to compact visualizations inside a table. The W05 lecture connects the exercise to the course work on communicating proposed methods; this made me ask what a stakeholder would learn from the table.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>I especially like that the table-building code keeps presentation decisions separate from the calculations. For instance, <code>group_by()</code> and <code>summarise()</code> define the measures, while <code>gt()</code> and its formatting functions control what the audience sees. The title and footnote supply context; <code>data_color()</code> highlights magnitude; <code>gtExtras::gt_plt_bar()</code> adds an inline bar. An inline bar is a quick visual cue, but the adjacent count still gives an exact answer.</p>
 <p><strong>Tables and charts serve different reading tasks:</strong></p>
 <ol type="1">
@@ -2297,20 +2297,20 @@ Table 1: Pizza sales by category: exact values with an inline volume bar
 </figcaption>
 <div aria-describedby="tbl-pizza-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="lhavoplbbo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lhavoplbbo table {
+<div id="hpqwkjzbxr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hpqwkjzbxr table {
 font-family: Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#lhavoplbbo thead, #lhavoplbbo tbody, #lhavoplbbo tfoot, #lhavoplbbo tr, #lhavoplbbo td, #lhavoplbbo th {
+#hpqwkjzbxr thead, #hpqwkjzbxr tbody, #hpqwkjzbxr tfoot, #hpqwkjzbxr tr, #hpqwkjzbxr td, #hpqwkjzbxr th {
 border-style: none;
 }
-#lhavoplbbo p {
+#hpqwkjzbxr p {
 margin: 0;
 padding: 0;
 }
-#lhavoplbbo .gt_table {
+#hpqwkjzbxr .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -2335,11 +2335,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#lhavoplbbo .gt_caption {
+#hpqwkjzbxr .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#lhavoplbbo .gt_title {
+#hpqwkjzbxr .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -2350,7 +2350,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#lhavoplbbo .gt_subtitle {
+#hpqwkjzbxr .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -2361,7 +2361,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#lhavoplbbo .gt_heading {
+#hpqwkjzbxr .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -2372,12 +2372,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#lhavoplbbo .gt_bottom_border {
+#hpqwkjzbxr .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#lhavoplbbo .gt_col_headings {
+#hpqwkjzbxr .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -2391,7 +2391,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#lhavoplbbo .gt_col_heading {
+#hpqwkjzbxr .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2410,7 +2410,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#lhavoplbbo .gt_column_spanner_outer {
+#hpqwkjzbxr .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2421,13 +2421,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#lhavoplbbo .gt_column_spanner_outer:first-child {
+#hpqwkjzbxr .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#lhavoplbbo .gt_column_spanner_outer:last-child {
+#hpqwkjzbxr .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#lhavoplbbo .gt_column_spanner {
+#hpqwkjzbxr .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -2438,10 +2438,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#lhavoplbbo .gt_spanner_row {
+#hpqwkjzbxr .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#lhavoplbbo .gt_group_heading {
+#hpqwkjzbxr .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2466,7 +2466,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#lhavoplbbo .gt_empty_group_heading {
+#hpqwkjzbxr .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -2480,13 +2480,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#lhavoplbbo .gt_from_md > :first-child {
+#hpqwkjzbxr .gt_from_md > :first-child {
 margin-top: 0;
 }
-#lhavoplbbo .gt_from_md > :last-child {
+#hpqwkjzbxr .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#lhavoplbbo .gt_row {
+#hpqwkjzbxr .gt_row {
 padding-top: 9px;
 padding-bottom: 9px;
 padding-left: 5px;
@@ -2504,7 +2504,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#lhavoplbbo .gt_stub {
+#hpqwkjzbxr .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2516,7 +2516,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lhavoplbbo .gt_stub_row_group {
+#hpqwkjzbxr .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -2529,13 +2529,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#lhavoplbbo .gt_row_group_first td {
+#hpqwkjzbxr .gt_row_group_first td {
 border-top-width: 2px;
 }
-#lhavoplbbo .gt_row_group_first th {
+#hpqwkjzbxr .gt_row_group_first th {
 border-top-width: 2px;
 }
-#lhavoplbbo .gt_summary_row {
+#hpqwkjzbxr .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -2544,14 +2544,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lhavoplbbo .gt_first_summary_row {
+#hpqwkjzbxr .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#lhavoplbbo .gt_first_summary_row.thick {
+#hpqwkjzbxr .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#lhavoplbbo .gt_last_summary_row {
+#hpqwkjzbxr .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2560,7 +2560,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#lhavoplbbo .gt_grand_summary_row {
+#hpqwkjzbxr .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -2569,7 +2569,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lhavoplbbo .gt_first_grand_summary_row {
+#hpqwkjzbxr .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2578,7 +2578,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#lhavoplbbo .gt_last_grand_summary_row_top {
+#hpqwkjzbxr .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -2587,10 +2587,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#lhavoplbbo .gt_striped {
+#hpqwkjzbxr .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#lhavoplbbo .gt_table_body {
+#hpqwkjzbxr .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -2598,7 +2598,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#lhavoplbbo .gt_footnotes {
+#hpqwkjzbxr .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -2611,7 +2611,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#lhavoplbbo .gt_footnote {
+#hpqwkjzbxr .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -2619,7 +2619,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lhavoplbbo .gt_sourcenotes {
+#hpqwkjzbxr .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -2632,64 +2632,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#lhavoplbbo .gt_sourcenote {
+#hpqwkjzbxr .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#lhavoplbbo .gt_left {
+#hpqwkjzbxr .gt_left {
 text-align: left;
 }
-#lhavoplbbo .gt_center {
+#hpqwkjzbxr .gt_center {
 text-align: center;
 }
-#lhavoplbbo .gt_right {
+#hpqwkjzbxr .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#lhavoplbbo .gt_font_normal {
+#hpqwkjzbxr .gt_font_normal {
 font-weight: normal;
 }
-#lhavoplbbo .gt_font_bold {
+#hpqwkjzbxr .gt_font_bold {
 font-weight: bold;
 }
-#lhavoplbbo .gt_font_italic {
+#hpqwkjzbxr .gt_font_italic {
 font-style: italic;
 }
-#lhavoplbbo .gt_super {
+#hpqwkjzbxr .gt_super {
 font-size: 65%;
 }
-#lhavoplbbo .gt_footnote_marks {
+#hpqwkjzbxr .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#lhavoplbbo .gt_asterisk {
+#hpqwkjzbxr .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#lhavoplbbo .gt_indent_1 {
+#hpqwkjzbxr .gt_indent_1 {
 text-indent: 5px;
 }
-#lhavoplbbo .gt_indent_2 {
+#hpqwkjzbxr .gt_indent_2 {
 text-indent: 10px;
 }
-#lhavoplbbo .gt_indent_3 {
+#hpqwkjzbxr .gt_indent_3 {
 text-indent: 15px;
 }
-#lhavoplbbo .gt_indent_4 {
+#hpqwkjzbxr .gt_indent_4 {
 text-indent: 20px;
 }
-#lhavoplbbo .gt_indent_5 {
+#hpqwkjzbxr .gt_indent_5 {
 text-indent: 25px;
 }
-#lhavoplbbo .katex-display {
+#hpqwkjzbxr .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#lhavoplbbo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hpqwkjzbxr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
@@ -2806,22 +2806,9 @@ Sales performance
 <section id="appendix-project-links" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Appendix: project links</h1>
 <p><strong>Prompt:</strong> Push the project folder to GitHub, publish the HTML on GitHub Pages, and include clickable links to both URLs.</p>
-<div class="callout callout-style-default callout-warning callout-titled" title="Publishing details pending">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Publishing details pending
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The GitHub repository and Pages URLs have not been provided or verified. Add the two actual links after publishing; do not submit placeholder addresses as working links.</p>
-</div>
-</div>
 <ul>
 <li>GitHub repository: <a href="https://github.com/candicechuang/M05-Table-Viz">candicechuang/M05-Table-Viz</a></li>
-<li>Published HTML: <strong>[insert verified GitHub Pages URL]</strong></li>
+<li>Published HTML: <a href="https://candicechuang.github.io/M05-Table-Viz/Chuang-Pei-Yun-M05-Table-Viz.html">M05 table visualization report</a></li>
 </ul>
 <p>For reproduction, install <code>dplyr</code>, <code>gt</code>, and <code>gtExtras</code> in R, open this M05 folder in RStudio or Positron, and render this <code>.qmd</code> using Quarto. The HTML output is intended to be self-contained through <code>embed-resources: true</code>.</p>
 <!-- -->
@@ -3326,7 +3313,7 @@ Sales performance
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>**Prompt:** Summarize what you learned from the videos; explain what you liked about <span class="in">`gt`</span> and <span class="in">`gtExtras`</span>, how tables complement charts, and when you would prefer a table.</span>
 <span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>The assigned videos show that a table can do more than list values. The first *Making Beautiful Tables with {gt}* tutorial moves from a title and subtitle to a stub, readable labels, number formatting, source notes, footnotes, and cell colors. The second tutorial shows how currency, column widths, fonts, alignment, and borders make a table easier to present. The Tom Mock conversation and short <span class="in">`gtExtras`</span> video extend that idea to compact visualizations inside a table. The long W05 lecture places the exercise in the course context of communicating proposed methods; I use that context to ask what a stakeholder would learn from the table. These observations follow the provided video titles and chapter markers; I have not independently reviewed the full recordings.<span class="ot">[^1]</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>The assigned videos show that a table can do more than list values. The first *Making Beautiful Tables with {gt}* tutorial moves from a title and subtitle to a stub, readable labels, number formatting, source notes, footnotes, and cell colors. The second tutorial covers currency, column widths, fonts, alignment, and borders that make a table easier to present. The Tom Mock conversation and short <span class="in">`gtExtras`</span> video extend that idea to compact visualizations inside a table. The W05 lecture connects the exercise to the course work on communicating proposed methods; this made me ask what a stakeholder would learn from the table.<span class="ot">[^1]</span></span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ot">[^1]: </span>Assigned materials: <span class="co">[</span><span class="ot">W05 course lecture</span><span class="co">](https://streaming.cpp.edu/embed/secure/iframe/entryId/1_m1bvmp1r/uiConfId/52359092/st/0)</span>; <span class="co">[</span><span class="ot">Making Beautiful Tables with {gt}, tutorial 1</span><span class="co">](https://www.youtube.com/watch?v=z0UGmMOxl-c)</span>; <span class="co">[</span><span class="ot">tutorial 2</span><span class="co">](https://www.youtube.com/watch?v=UoJm8_nFWsE)</span>; <span class="co">[</span><span class="ot">conversation with Tom Mock</span><span class="co">](https://www.youtube.com/watch?v=dxDeotwylr8)</span>; and <span class="co">[</span><span class="ot">Create Fantastic Tables using gtExtras</span><span class="co">](https://www.youtube.com/watch?v=AJ0_PCIVXD4)</span>.</span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
@@ -3405,14 +3392,10 @@ Sales performance
 <span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>**Prompt:** Push the project folder to GitHub, publish the HTML on GitHub Pages, and include clickable links to both URLs.</span>
 <span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning title=&quot;Publishing details pending&quot;}</span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>The GitHub repository and Pages URLs have not been provided or verified. Add the two actual links after publishing; do not submit placeholder addresses as working links.</span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>GitHub repository: <span class="co">[</span><span class="ot">candicechuang/M05-Table-Viz</span><span class="co">](https://github.com/candicechuang/M05-Table-Viz)</span></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Published HTML: **\[insert verified GitHub Pages URL\]**</span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>For reproduction, install <span class="in">`dplyr`</span>, <span class="in">`gt`</span>, and <span class="in">`gtExtras`</span> in R, open this M05 folder in RStudio or Positron, and render this <span class="in">`.qmd`</span> using Quarto. The HTML output is intended to be self-contained through <span class="in">`embed-resources: true`</span>.</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>GitHub repository: <span class="co">[</span><span class="ot">candicechuang/M05-Table-Viz</span><span class="co">](https://github.com/candicechuang/M05-Table-Viz)</span></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Published HTML: <span class="co">[</span><span class="ot">M05 table visualization report</span><span class="co">](https://candicechuang.github.io/M05-Table-Viz/Chuang-Pei-Yun-M05-Table-Viz.html)</span></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>For reproduction, install <span class="in">`dplyr`</span>, <span class="in">`gt`</span>, and <span class="in">`gtExtras`</span> in R, open this M05 folder in RStudio or Positron, and render this <span class="in">`.qmd`</span> using Quarto. The HTML output is intended to be self-contained through <span class="in">`embed-resources: true`</span>.</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

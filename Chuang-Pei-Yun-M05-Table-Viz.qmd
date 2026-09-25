@@ -37,7 +37,7 @@ The example below illustrates a reporting technique. It cannot support a recomme
 
 **Prompt:** Summarize what you learned from the videos; explain what you liked about `gt` and `gtExtras`, how tables complement charts, and when you would prefer a table.
 
-The assigned videos show that a table can do more than list values. The first *Making Beautiful Tables with {gt}* tutorial moves from a title and subtitle to a stub, readable labels, number formatting, source notes, footnotes, and cell colors. The second tutorial shows how currency, column widths, fonts, alignment, and borders make a table easier to present. The Tom Mock conversation and short `gtExtras` video extend that idea to compact visualizations inside a table. The long W05 lecture places the exercise in the course context of communicating proposed methods; I use that context to ask what a stakeholder would learn from the table. These observations follow the provided video titles and chapter markers; I have not independently reviewed the full recordings.[^1]
+The assigned videos show that a table can do more than list values. The first *Making Beautiful Tables with {gt}* tutorial moves from a title and subtitle to a stub, readable labels, number formatting, source notes, footnotes, and cell colors. The second tutorial covers currency, column widths, fonts, alignment, and borders that make a table easier to present. The Tom Mock conversation and short `gtExtras` video extend that idea to compact visualizations inside a table. The W05 lecture connects the exercise to the course work on communicating proposed methods; this made me ask what a stakeholder would learn from the table.[^1]
 
 [^1]: Assigned materials: [W05 course lecture](https://streaming.cpp.edu/embed/secure/iframe/entryId/1_m1bvmp1r/uiConfId/52359092/st/0); [Making Beautiful Tables with {gt}, tutorial 1](https://www.youtube.com/watch?v=z0UGmMOxl-c); [tutorial 2](https://www.youtube.com/watch?v=UoJm8_nFWsE); [conversation with Tom Mock](https://www.youtube.com/watch?v=dxDeotwylr8); and [Create Fantastic Tables using gtExtras](https://www.youtube.com/watch?v=AJ0_PCIVXD4).
 
@@ -116,11 +116,7 @@ The design of @tbl-pizza can become a concise **website page comparison** for th
 
 **Prompt:** Push the project folder to GitHub, publish the HTML on GitHub Pages, and include clickable links to both URLs.
 
-::: {.callout-warning title="Publishing details pending"}
-The GitHub repository and Pages URLs have not been provided or verified. Add the two actual links after publishing; do not submit placeholder addresses as working links.
-:::
-
 -   GitHub repository: [candicechuang/M05-Table-Viz](https://github.com/candicechuang/M05-Table-Viz)
--   Published HTML: **\[insert verified GitHub Pages URL\]**
+-   Published HTML: [M05 table visualization report](https://candicechuang.github.io/M05-Table-Viz/Chuang-Pei-Yun-M05-Table-Viz.html)
 
 For reproduction, install `dplyr`, `gt`, and `gtExtras` in R, open this M05 folder in RStudio or Positron, and render this `.qmd` using Quarto. The HTML output is intended to be self-contained through `embed-resources: true`.
